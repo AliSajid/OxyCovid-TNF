@@ -1,0 +1,13 @@
+perturbagen,treatment,cellline,similarity
+Carbetocin,TNFAIP3,PC3,0.3265
+Carbetocin,TNFRSF10A,PC3,0.3253
+Carbetocin,TNFRSF11A,PC3,0.3171
+Carbetocin,TNF,PC3,0.3049
+Carbetocin,TNFSF13,PC3,0.5046
+Chloroquine,TNFSF13,PC3,0.4739
+Chloroquine,TNFRSF10A,PC3,0.4598
+Chloroquine,TNF,PC3,0.4432
+Chloroquine,TNFAIP1,PC3,0.4076
+Chloroquine,TNFSF13B,PC3,0.391
+Chloroquine,TNFRSF6B,PC3,0.3915
+Chloroquine,TNFRSF11A,PC3,0.3454

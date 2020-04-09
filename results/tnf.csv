@@ -1,0 +1,8 @@
+perturbagen,cellline,similarity
+Chloroquine,HA1E,0.5261
+Carbetocin,HA1E,0.6533
+Hydroxychloroquine,MCF7,-0.43120000000000003
+Carbetocin,MCF7,0.28
+Chloroquine,MCF7,0.7443
+Carbetocin,PC3,0.3049
+Chloroquine,PC3,0.4432

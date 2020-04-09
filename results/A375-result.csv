@@ -1,0 +1,9 @@
+perturbagen,treatment,cellline,similarity
+Carbetocin,TNFRSF21,A375,0.4584
+Desmopressin,TNFRSF10B,A375,0.2696
+Desmopressin,IL6ST,A375,0.2695
+Desmopressin,TNFSF4,A375,0.2461
+Desmopressin,TNFRSF17,A375,0.2132
+Chloroquine,TNFRSF17,A375,0.5984
+Chloroquine,TNFSF8,A375,0.3506
+Chloroquine,TNFRSF13C,A375,0.3462
