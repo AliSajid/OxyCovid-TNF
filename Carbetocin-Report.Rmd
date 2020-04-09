@@ -1,0 +1,71 @@
+---
+title: "Fluoxetine and IL6"
+author: "Dr. Ali Sajid Imami"
+date: "31/03/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(tidyverse))
+all_results <- read_csv("results/all_results.csv")
+all_averaged <- read_csv("results/all_averaged.csv")
+tnfcrosstab <- read_csv("results/tnfcrosstab.csv")
+```
+
+## Background
+
+To assess the potential of Fluoxetine in preventing and/or mitigating cytokine storm, we performed an in-silico analysis of the transcriptional profile of the drugs. The drugs chosen were:
+
+1. Carbetocin
+2. Desmopressin
+3. Chloroquine
+4. Hydroxychloroquine
+
+The identified IL-6 related target genes were:
+
+1. IL6
+2. IL6R (Receptor)
+3. IL6ST (Signal Transducer)
+
+After reviewing iLINCS data, 4 cell lines that had signatures for all the drugs were chosen. The cell lines are: 
+
+1. A375
+1. HA1E
+1. MCF7
+1. PC3
+
+A simple summary of the data is given below along with interpretation.
+
+## Averaged Similarity
+
+To assess the similarity across cell lines, we downloaded the signatures of the individual drugs in the selected cell lines, obtained connected knock-down signatures and then looked at their similarity or "concordance".
+
+The table is below:
+
+```{r, echo = FALSE}
+all_averaged %>% arrange(treatment, desc(mean_similarity)) %>%  knitr::kable()
+```
+
+We can see from the table that mean similarity across the cell lines is variable. In addition, we only have Chloroquine and Desmopressin as having a significant concrdance value. And within that, only IL6R has common expression between the two drugs. 
+
+## Cell-Specific Similarity
+
+We also checked the similarity in cell-line specific manner. 
+
+The table is below:
+
+```{r, echo = FALSE}
+all_results %>% arrange(cellline, treatment, desc(similarity)) %>%  knitr::kable()
+```
+
+We only have hits from all 4 cell lines. Those are heterogeneuos but we can focus on just TNF here.
+
+## TNF Specific similarity
+
+```{r, echo=FALSE}
+
+tnfcrosstab %>% knitr::kable()
+
+```
+
