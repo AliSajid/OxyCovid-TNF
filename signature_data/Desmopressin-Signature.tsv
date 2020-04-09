@@ -1,0 +1,11 @@
+SignatureId	Perturbagen	GeneTargets	Concentration	CellLine	Time	is_exemplar
+LINCSCP_107851	Desmopressin		1.11uM	HELA	24h	
+LINCSCP_107854	Desmopressin		0.04uM	HELA	24h	
+LINCSCP_124650	Desmopressin		3.33uM	HT29	24h	
+LINCSCP_141237	Desmopressin		0.12uM	MCF7	24h	
+LINCSCP_141238	Desmopressin		0.04uM	MCF7	24h	
+LINCSCP_159437	Desmopressin		0.37uM	PC3	24h	
+LINCSCP_77689	Desmopressin		0.37uM	A375	24h	
+LINCSCP_96019	Desmopressin		10uM	HA1E	24h	
+LINCSCP_96020	Desmopressin		3.33uM	HA1E	24h	
+LINCSCP_96024	Desmopressin		0.04uM	HA1E	24h	
