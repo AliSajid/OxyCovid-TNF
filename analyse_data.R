@@ -47,7 +47,7 @@ filter_data <- function(data, cell_line, cutoff) {
     output <- dataframe %>%
     filter(cellline == cell_line) %>%
     group_by(cellline, treatment, Perturbagen) %>%
-    filter(similarity == max(similarity)) %>%
+    filter(similarity == max(similarity) | similarity == min(similarity)) %>%
     ungroup() %>% 
     select(signatureid, treatment, Perturbagen, similarity, pValue, cellline)
     return(output)
@@ -85,19 +85,35 @@ all_averaged <- all_results %>%
 
 write_csv(all_averaged, "results/all_averaged.csv")
 
-common_cell_lines <- c("MCF7, A375, HA1E")
+common_cell_lines <- c("MCF7", "A375", "HA1E")
 
-tnf <- all_results %>% 
-  filter(treatment == "TNF") %>% 
-  ungroup() %>% 
-  select(-treatment) %>% 
-  arrange(cellline, similarity)
+process_gene <- function(dataset, gene) {
+  g <- dataset %>% 
+    filter(treatment == gene) %>% 
+    ungroup() %>% 
+    select(-treatment) %>% 
+    arrange(cellline, similarity)
+  
+  gcross <- g %>% 
+    dcast(cellline ~ perturbagen)
+  
+  prefix <- "results/"
+  file <- paste(gene, "csv", sep = ".")
+  crossfile <- paste(paste(gene, "crosstab", sep = "-"), "csv", sep = ".")
+  
+  write_csv(g, paste(prefix, file, sep = "/"))
+  write_csv(gcross, paste(prefix, crossfile, sep = "/"))
+  invisible(list(g, gcross))
+}
 
-write_csv(tnf, "results/tnf.csv")
-
-tnfcrosstab <- dcast(tnf, cellline ~ perturbagen)
-
-write.csv(tnfcrosstab, "results/tnfcrosstab.csv")
+process_gene(all_results, "TNF") # Selected and subset to HA1E
+process_gene(all_results, "TLR7") # Selecting HA1E
+process_gene(all_results, "TLR9") # Selecting HA1E
+process_gene(all_results, "ARG1") # Selecting HA1E
+# process_gene(all_results, "CD40") # Does not have Carbetocin in result
+# process_gene(all_results, "CD46") # Does not have a direct comparison with Carbetocin
+process_gene(all_results, "CD83") # Selecting HA1E
+# process_gene(all_results, "CD44") # Does not have a direct comparison with Carbetocin
 
 carbetocin <- all_results %>% 
   filter(perturbagen == "Carbetocin") %>% 
