@@ -1,0 +1,5 @@
+perturbagen,cellline,similarity
+Bupropion,A375,0.3102
+Chloroquine,A375,0.4022
+Bupropion,MCF7,0.2185
+Chloroquine,MCF7,0.6049
