@@ -68,7 +68,9 @@ drug_results <- list.files("data/filtered/", pattern = "LINCSCP", full.names = T
 genes <- c("IL6", "IL6R", "IL6ST", "TNF", "TNF", "TNFAIP1", "TNFAIP3", "TNFRSF10A",
           "TNFRSF10B", "TNFRSF11A", "TNFRSF12A", "TNFRSF13C", "TNFRSF14", "TNFRSF18",
           "TNFRSF19", "TNFRSF1A", "TNFRSF21", "TNFRSF6B", "TNFSF10", "TNFSF13", "TNFSF13B",
-          "TNFSF15", "TNFSF4", "TNFSF8", "TNFRSF13B", "TNFRSF17", "C1QTNF6")
+          "TNFSF15", "TNFSF4", "TNFSF8", "TNFRSF13B", "TNFRSF17", "C1QTNF6",
+          "CD8A", "CD8B", "CD4", "CTLA4", "CD19", "CD20", "CD3G", "CD11B", "TLR9", "TLR7", "ARG1",
+          "CD40", "CD46", "CD44", "CD81", "CD83")
 
 for (drug in drug_results) {
   name <- str_split(drug, "/")[[1]][4]
