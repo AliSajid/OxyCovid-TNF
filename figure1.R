@@ -47,38 +47,3 @@ generate_figure("ARG1", c("HA1E"), section = "immune")
 generate_figure("CD83", c("HA1E"), section = "immune")
 generate_figure("TLR7", c("HA1E"), section = "immune")
 generate_figure("TLR9", c("HA1E"), section = "immune")
-
-
-# selected <- c("HA1E", "PC3")
-# 
-# df <- read_csv("results/tnf.csv") %>% 
-#   filter(cellline %in% selected)
-# 
-# p <-  ggplot(df, 
-#              aes(x = perturbagen, 
-#                  y = similarity, 
-#                  group = cellline, 
-#                  color = cellline,
-#                  shape  = cellline,
-#                  label = similarity)
-#              )
-# 
-# bp <- p + geom_point() + geom_line() + 
-#   scale_x_discrete(limits = c("Bupropion", "Carbetocin", "Chloroquine")) +
-#   xlab("Medication") +
-#   ylab("Similarity Score relative to TNF Knockout") +
-#   scale_color_discrete(name = "Cell Line") + 
-#   scale_shape_manual(
-#     name = element_blank(),
-#     values = c(16, 16)
-#   ) +
-#   geom_label(hjust = -0.5, vjust = 0) +
-#   guides(size=FALSE,
-#          color = guide_legend(override.aes = list(shape=16)),
-#          shape = FALSE
-#   )
-# 
-# bp
-# 
-# ggsave("figures/inflammation-comparsion.png", device = "png")
-# ggsave("figures/inflammation-comparsion.pdf", device = "pdf")
