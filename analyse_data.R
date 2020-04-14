@@ -47,7 +47,7 @@ filter_data <- function(data) {
     dataframe <- data
     output <- dataframe %>%
     group_by(treatment, perturbagen) %>%
-    filter(similarity == max(similarity) | similarity == min(similarity)) %>%
+    filter(abs(similarity) == max(abs(similarity))) %>%
     ungroup() %>% 
     select(signatureid, treatment, perturbagen, similarity, pValue, cellline)
     return(output)
@@ -75,7 +75,6 @@ all_results <- analysed %>%
   select(perturbagen, treatment, cellline, similarity)
 
 write_csv(all_results, "results/all_results.csv")
-
 
 all_averaged <- all_results %>% 
   group_by(perturbagen, treatment) %>% 
@@ -114,11 +113,7 @@ process_gene(all_results, "CD44") # Does not have a direct comparison with Carbe
 carbetocin <- all_results %>% 
   filter(perturbagen == "Carbetocin") %>% 
   ungroup() %>% 
-  select(-perturbagen) %>% 
-  arrange(cellline, similarity)
+  select(-perturbagen, -cellline) %>% 
+  arrange(similarity)
 
 write_csv(carbetocin, "results/carbetocin.csv")
-
-carbetocincrosstab <- dcast(carbetocin, cellline ~ treatment)
-
-write.csv(carbetocincrosstab, "results/carbetocincrosstab.csv")
