@@ -65,7 +65,7 @@ for (drug in drugs_signatures) {
 
 drug_results <- list.files("data/filtered/", pattern = "LINCSCP", full.names = TRUE)
 
-genes <- c("IL6", "IL6R", "IL6ST", "TNF", "TNFAIP1", "TNFAIP3", "TNFRSF10A",
+genes <- c("IL1A", "IL1B", "IL1R1", "IL1R2", "IL1RN", "IL1RAP", "IL1RL1", "IL1RL2", "IL6", "IL6R", "IL6ST", "TNF", "TNFAIP1", "TNFAIP3", "TNFRSF10A",
           "TNFRSF10B", "TNFRSF11A", "TNFRSF12A", "TNFRSF13C", "TNFRSF14", "TNFRSF18",
           "TNFRSF19", "TNFRSF1A", "TNFRSF21", "TNFRSF6B", "TNFSF10", "TNFSF13", "TNFSF13B",
           "TNFSF15", "TNFSF4", "TNFSF8", "TNFRSF13B", "TNFRSF17", "C1QTNF6",
