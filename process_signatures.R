@@ -65,7 +65,7 @@ for (drug in drugs_signatures) {
 
 drug_results <- list.files("data/filtered/", pattern = "LINCSCP", full.names = TRUE)
 
-genes <- c("IL6", "IL6R", "IL6ST", "TNF", "TNF", "TNFAIP1", "TNFAIP3", "TNFRSF10A",
+genes <- c("IL6", "IL6R", "IL6ST", "TNF", "TNFAIP1", "TNFAIP3", "TNFRSF10A",
           "TNFRSF10B", "TNFRSF11A", "TNFRSF12A", "TNFRSF13C", "TNFRSF14", "TNFRSF18",
           "TNFRSF19", "TNFRSF1A", "TNFRSF21", "TNFRSF6B", "TNFSF10", "TNFSF13", "TNFSF13B",
           "TNFSF15", "TNFSF4", "TNFSF8", "TNFRSF13B", "TNFRSF17", "C1QTNF6",
@@ -84,15 +84,3 @@ for (drug in drug_results) {
   fullname <- paste(prefix, filename, sep = "/")
   write_tsv(concordance, fullname)
 }
-
-# drugs <- c("Fluoxetine", "Paroxetine", "Bupropion")
-# 
-# for (target in target_results) {
-#   name <- str_split(target, "/")[[1]][4]
-#   concordance <- get_concordant_signatures(target) %>% 
-#     filter(compound %in% drugs)
-#   prefix <- paste("results", "targets", sep = "/")
-#   filename <- paste(paste(name, "Concordant", sep = "-"), "tsv", sep = ".")
-#   fullname <- paste(prefix, filename, sep = "/")
-#   write_tsv(concordance, fullname)
-# }
