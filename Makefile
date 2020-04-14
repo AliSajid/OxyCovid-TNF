@@ -3,8 +3,9 @@ DATA_DIR=data/
 RES_DIR=results/
 FIG_DIR=figures/
 
-.PHONY:
-	clean all
+.PHONY: complete
+	
+complete: clean all
 
 clean:
 	find $(DATA_DIR) -name "*.tsv" -delete
@@ -23,7 +24,8 @@ analyse: analyse_data.R
 	Rscript analyse_data.R
 
 visualise: figure*.R
-	find . -name "figure*.R" | xargs Rscript
+	Rscript figure1.R
+	Rscript figure2.R
+	Rscript figure3.R
 
-all:
-	curate process analyse visualise
+all: curate process analyse visualise
