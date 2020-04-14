@@ -6,7 +6,7 @@ library(reshape2)
 all_averaged <- read_csv("results/all_averaged.csv")
 
 all_averaged_cross_inf <- all_averaged %>% 
-  select(IL1, IL6, IL6R, IL6ST, TNF) %>% 
+  select(IL1A, IL1B, IL6, IL6R, IL6ST, TNF) %>% 
   dcast(perturbagen ~ treatment, value.var = "mean_similarity") %>% 
   column_to_rownames("perturbagen") %>% 
   as.matrix()

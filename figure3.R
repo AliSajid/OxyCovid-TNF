@@ -6,7 +6,7 @@ library(reshape2)
 all_results <- read_csv("results/all_results.csv")
 
 all_results_cross_inf <- all_results %>% 
-  select(IL1, IL6, IL6R, IL6ST, TNF, -cellline) %>% 
+  select(IL1A, IL1B, IL6, IL6R, IL6ST, TNF, -cellline) %>% 
   dcast(perturbagen ~ treatment, value.var = "similarity") %>% 
   column_to_rownames("perturbagen") %>% 
   as.matrix()
