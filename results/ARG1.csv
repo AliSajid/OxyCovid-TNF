@@ -1,6 +1,11 @@
 perturbagen,cellline,similarity
-Bupropion,A375,0.5069
+Chloroquine,A375,-0.4942
+Bupropion,ASC,-0.5144
+Hydroxychloroquine,ASC,-0.3617
 Carbetocin,HA1E,-0.6181
-Chloroquine,HA1E,0.479
+Desmopressin,HA1E,0.36
+Carbetocin,HA1E,0.5414
 Bupropion,HA1E,0.5818
-Chloroquine,MCF7,0.3568
+Hydroxychloroquine,HCC515,0.4104
+Chloroquine,HCC515,0.6236
+Desmopressin,NPC,0.216

@@ -1,2 +1,6 @@
-cellline,Bupropion,Chloroquine,Desmopressin
-MCF7,0.2978,-0.4853,-0.2395
+cellline,Bupropion,Carbetocin,Chloroquine,Desmopressin
+A549,0.48,NA,NA,0.3565
+HT29,NA,NA,0.541,NA
+MCF7,NA,NA,NA,-0.3868
+PC3,NA,0.282,NA,NA
+VCAP,-0.5222,0.3437,-0.5006,NA

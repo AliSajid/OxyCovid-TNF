@@ -1,0 +1,5 @@
+perturbagen,treatment,cellline,similarity
+Carbetocin,CD19,ASC,-0.3228
+Desmopressin,TNFAIP1,ASC,0.3537
+Hydroxychloroquine,ARG1,ASC,-0.3617
+Bupropion,ARG1,ASC,-0.5144

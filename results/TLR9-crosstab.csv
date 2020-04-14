@@ -1,3 +1,4 @@
 cellline,Bupropion,Carbetocin,Chloroquine,Desmopressin,Hydroxychloroquine
-HA1E,0.6281,-0.5912,0.5134,NA,NA
-MCF7,0.4204,NA,0.5603,0.4169,0.4278
+HA1E,1,2,1,0,1
+HCC515,1,0,0,1,0
+MCF7,0,0,1,1,1

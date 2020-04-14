@@ -36,38 +36,36 @@ for (i in 1:length(files)) {
 
 df <- reduce(dfs, bind_rows)
 
-drugs <- c("Carbetocin", "Desmopressin", "Hydroxychloroquine", "Chloroquine", "Bupropion")
+drugs <- c("Carbetocin", "Desmopressin", "Hydroxychloroquine", "Chloroquine",
+           "Bupropion", "Ritonavit", "Lopinavir")
 
-complete <- inner_join(df, metadata, by = c("Source_Signature" = "SignatureId", "cellline" = "CellLine")) %>% 
+complete <- inner_join(df, metadata, by = c("Source_Signature" = "SignatureId")) %>% 
   mutate(perturbagen = str_to_title(Perturbagen)) %>% 
   filter(perturbagen %in% drugs)
 
-filter_data <- function(data, cell_line, cutoff) {
+filter_data <- function(data) {
     dataframe <- data
     output <- dataframe %>%
-    filter(cellline == cell_line) %>%
-    group_by(cellline, treatment, Perturbagen) %>%
+    group_by(treatment, perturbagen) %>%
     filter(similarity == max(similarity) | similarity == min(similarity)) %>%
     ungroup() %>% 
-    select(signatureid, treatment, Perturbagen, similarity, pValue, cellline)
+    select(signatureid, treatment, perturbagen, similarity, pValue, cellline)
     return(output)
   }
 
 write_csv(complete, 
           paste("results", paste(paste("complete", "result", sep = "-"), "csv", sep = "."), sep = "/"))
 
-analysed <- complete %>% 
-  group_by(cellline, treatment, perturbagen) %>% 
-  filter(similarity == max(similarity))
+analysed <- filter_data(complete)
 
-cell_lines <- c("A375", "HA1E", "MCF7", "PC3")
+#cell_lines <- c("A375", "HA1E", "MCF7", "PC3")
 
-for (cell in cell_lines) {
+for (cell in unique(analysed$cellline)) {
   outfile <- paste("results", paste(paste(cell, "result", sep = "-"), "csv", sep = "."), sep = "/")
-  
-  analysed %>% 
-    filter(cellline == cell) %>% 
-    select(perturbagen, treatment, cellline, similarity) %>% 
+
+  analysed %>%
+    filter(cellline == cell) %>%
+    select(perturbagen, treatment, cellline, similarity) %>%
     write_csv(outfile)
 }
 
@@ -84,8 +82,6 @@ all_averaged <- all_results %>%
   summarise(mean_similarity = mean(similarity))
 
 write_csv(all_averaged, "results/all_averaged.csv")
-
-common_cell_lines <- c("MCF7", "A375", "HA1E")
 
 process_gene <- function(dataset, gene) {
   g <- dataset %>% 
@@ -110,10 +106,10 @@ process_gene(all_results, "TNF") # Selected and subset to HA1E
 process_gene(all_results, "TLR7") # Selecting HA1E
 process_gene(all_results, "TLR9") # Selecting HA1E
 process_gene(all_results, "ARG1") # Selecting HA1E
-# process_gene(all_results, "CD40") # Does not have Carbetocin in result
-# process_gene(all_results, "CD46") # Does not have a direct comparison with Carbetocin
+process_gene(all_results, "CD40") # Does not have Carbetocin in result
+process_gene(all_results, "CD46") # Does not have a direct comparison with Carbetocin
 process_gene(all_results, "CD83") # Selecting HA1E
-# process_gene(all_results, "CD44") # Does not have a direct comparison with Carbetocin
+process_gene(all_results, "CD44") # Does not have a direct comparison with Carbetocin
 
 carbetocin <- all_results %>% 
   filter(perturbagen == "Carbetocin") %>% 
@@ -126,4 +122,3 @@ write_csv(carbetocin, "results/carbetocin.csv")
 carbetocincrosstab <- dcast(carbetocin, cellline ~ treatment)
 
 write.csv(carbetocincrosstab, "results/carbetocincrosstab.csv")
-
