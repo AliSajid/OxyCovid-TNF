@@ -1,7 +1,5 @@
 perturbagen,treatment,cellline,similarity
 Carbetocin,TNFRSF21,NPC,-0.5594
 Desmopressin,TNFRSF21,NPC,0.3628
-Desmopressin,ARG1,NPC,0.216
 Hydroxychloroquine,TNFRSF21,NPC,0.4088
-Chloroquine,TNFRSF21,NPC,-0.4578
 Chloroquine,TNFRSF21,NPC,0.6404

@@ -1,7 +1,3 @@
 perturbagen,treatment,cellline,similarity
 Carbetocin,CD40,HEKTE,-0.5222
-Desmopressin,TNF,HEKTE,0.2235
-Desmopressin,TNFRSF17,HEKTE,-0.2109
 Desmopressin,TNF,HEKTE,0.3277
-Desmopressin,CD40,HEKTE,0.2097
-Chloroquine,TNFRSF13B,HEKTE,0.3347
