@@ -1,16 +1,8 @@
 perturbagen,treatment,cellline,similarity
 Carbetocin,CD81,HT29,0.495
-Carbetocin,TNFSF4,HT29,-0.4869
 Desmopressin,CD81,HT29,-0.3374
-Desmopressin,TNFRSF1A,HT29,0.2608
-Desmopressin,TNFRSF6B,HT29,0.2387
 Hydroxychloroquine,CD81,HT29,-0.417
 Chloroquine,CD81,HT29,0.5605
 Chloroquine,CD44,HT29,0.541
-Chloroquine,TNFSF4,HT29,0.5223
-Bupropion,TNFSF13,HT29,0.2067
-Bupropion,TNFSF4,HT29,0.5461
 Bupropion,CD81,HT29,-0.4914
-Bupropion,TNFAIP1,HT29,0.4655
-Bupropion,TNFRSF19,HT29,0.2034
-Bupropion,TNFRSF10A,HT29,0.3542
+Lopinavir,CD46,HT29,0.4882

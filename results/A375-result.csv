@@ -1,15 +1,6 @@
 perturbagen,treatment,cellline,similarity
-Carbetocin,C1QTNF6,A375,0.5206
-Carbetocin,TNFRSF17,A375,0.4047
-Desmopressin,TNFSF8,A375,0.3218
-Desmopressin,TNFRSF13B,A375,0.3205
-Hydroxychloroquine,TNFSF15,A375,0.295
-Hydroxychloroquine,C1QTNF6,A375,0.2892
-Chloroquine,TNFRSF17,A375,0.5984
-Chloroquine,TNFSF10,A375,0.628
 Chloroquine,CD83,A375,0.5754
-Bupropion,TNFRSF21,A375,0.689
 Bupropion,CD83,A375,0.6406
 Bupropion,TLR7,A375,0.6254
-Bupropion,TNFRSF13C,A375,0.506
-Bupropion,C1QTNF6,A375,0.491
+Bupropion,IL1B,A375,0.5403
+Lopinavir,TNF,A375,0.6694
