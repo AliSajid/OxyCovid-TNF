@@ -24,11 +24,11 @@ for (target in targets_signatures) {
   filename <- paste(paste(target, "Signature", sep = "-"), "tsv", sep = ".")
   fullname <- paste(prefix, filename, sep = "/")
   if (!file.exists(fullname)) {
-    print(paste("Now Processing Signature:", drug))
+    print(paste("Now Processing Signature:", target))
     sig <- get_l1000_signature(target)
     write_tsv(sig, path = fullname)
   } else {
-    print(paste(drug, "Signature already exists."))
+    print(paste(target, "Signature already exists."))
   }
 }
 
@@ -48,39 +48,27 @@ for (drug in drugs_signatures) {
   
 }
 
-# for (target in targets_signatures) {
-#   prefix <- paste("data", "signatures", sep = "/")
-#   filename <- paste(paste(target, "Signature", sep = "-"), "tsv", sep = ".")
-#   fullname <- paste(prefix, filename, sep = "/")
-#   up <- generate_filtered_signature(signature_file = fullname, direction = "up")
-#   down <- generate_filtered_signature(signature_file = fullname, direction = "down")
-#   consensus <- bind_rows(up, down)
-#   
-#   consensus_prefix <- paste("data", "filtered", sep = "/")
-#   consensus_filename <- paste(paste(target, "Consensus", "Signature", sep = "-"), "tsv", sep = ".")
-#   consensus_fullname <- paste(consensus_prefix, consensus_filename, sep = "/")
-#   
-#   write_tsv(consensus, consensus_fullname)
-# }
-
 drug_results <- list.files("data/filtered/", pattern = "LINCSCP", full.names = TRUE)
 
-genes <- c("IL1A", "IL1B", "IL1R1", "IL1R2", "IL1RN", "IL1RAP", "IL1RL1", "IL1RL2", "IL6", "IL6R", "IL6ST", "TNF", "TNFAIP1", "TNFAIP3", "TNFRSF10A",
-          "TNFRSF10B", "TNFRSF11A", "TNFRSF12A", "TNFRSF13C", "TNFRSF14", "TNFRSF18",
-          "TNFRSF19", "TNFRSF1A", "TNFRSF21", "TNFRSF6B", "TNFSF10", "TNFSF13", "TNFSF13B",
-          "TNFSF15", "TNFSF4", "TNFSF8", "TNFRSF13B", "TNFRSF17", "C1QTNF6",
-          "CD8A", "CD8B", "CD4", "CTLA4", "CD19", "CD20", "CD3G", "CD11B", "TLR9", "TLR7", "ARG1",
+genes <- c("IL1A", "IL1B", "IL6", "IL6R",  "TNF",
+          "CD8A", "CD8B", "CD4", "CTLA4", "CD19",
+          "CD20", "CD3G", "CD11B", "TLR9", "TLR7", "ARG1",
           "CD40", "CD46", "CD44", "CD81", "CD83")
 
 for (drug in drug_results) {
   name <- str_split(drug, "/")[[1]][4]
   name <- str_split(name, "-")[[1]][1]
-  print(paste("Processing concordance for signature:", name))
-  concordance <- get_concordant_signatures(drug, library = "LIB_6") %>% 
-  filter(treatment %in% genes) %>% 
-  mutate(Source_Signature = name)
   prefix <- paste("results", "drugs", sep = "/")
   filename <- paste(paste(name, "Concordant", sep = "-"), "tsv", sep = ".")
   fullname <- paste(prefix, filename, sep = "/")
-  write_tsv(concordance, fullname)
+  if (!file.exists(fullname)) {
+    print(paste("Processing concordance for signature:", name))
+    concordance <- get_concordant_signatures(drug, library = "LIB_6") %>% 
+      filter(treatment %in% genes) %>% 
+      mutate(Source_Signature = name)
+    write_tsv(concordance, fullname)
+  } else {
+    print(paste(name, "concordant signature already exists. Skipping."))
+  }
+
 }
