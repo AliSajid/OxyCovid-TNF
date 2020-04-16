@@ -23,7 +23,8 @@ for (i in 1:length(drugs_list)) {
 
 cell_lines <- reduce(selected_lines, intersect)
 
-drugs <- bind_rows(carbetocin, desmopressin, hydroxychloroquine, chloroquine, bupropion, lopinavir, ritonavir) %>% 
+drugs <- bind_rows(carbetocin, desmopressin, hydroxychloroquine, chloroquine,
+                   bupropion, lopinavir, ritonavir) %>% 
   filter(CellLine %in% cell_lines)
 
 write_file(paste(drugs$SignatureId, collapse = "\n"), "drugs_signature_ids")
