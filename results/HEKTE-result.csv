@@ -1,3 +1,9 @@
 perturbagen,treatment,cellline,similarity
-Carbetocin,CD40,HEKTE,-0.5222
-Desmopressin,TNF,HEKTE,0.3277
+Carbetocin,CD40,HEKTE,-0.5322
+Desmopressin,TNF,HEKTE,0.3752
+Lopinavir,CD40,HEKTE,0.5526
+Lisinopril,CD40,HEKTE,0.5933
+Olmesartan,CD40,HEKTE,0.6411
+Ramipril,CD40,HEKTE,-0.4869
+Telmisartan,CD40,HEKTE,0.5495
+Valsartan,CD40,HEKTE,0.547

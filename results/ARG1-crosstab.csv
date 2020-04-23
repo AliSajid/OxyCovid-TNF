@@ -1,4 +1,5 @@
-cellline,Bupropion,Carbetocin,Chloroquine,Desmopressin,Hydroxychloroquine,Lopinavir
-HA1E,0.5818,-0.6181,NA,0.36,NA,NA
-HCC515,NA,NA,0.6236,NA,0.4104,NA
-NPC,NA,NA,NA,NA,NA,0.3943
+cellline,Benazepril,Bupropion,Captopril,Carbetocin,Chloroquine,Desmopressin,Enalapril,Fosinopril,Lisinopril,Lopinavir,Moexipril,Olmesartan,Perindopril,Quinapril,Ramipril,Telmisartan,Valsartan
+ASC,NA,NA,0.5383,NA,0.6488,NA,0.6356,0.6322,NA,0.6006,0.5569,NA,0.6241,NA,0.5118,0.6171,NA
+HA1E,0.633,NA,NA,-0.6181,NA,NA,NA,NA,0.601,NA,NA,NA,NA,0.5953,NA,NA,0.6265
+HCC515,NA,0.6264,NA,NA,NA,NA,NA,NA,NA,NA,NA,0.6568,NA,NA,NA,NA,NA
+NPC,NA,NA,NA,NA,NA,0.3958,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

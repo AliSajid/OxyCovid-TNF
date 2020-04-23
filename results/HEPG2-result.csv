@@ -1,3 +1,11 @@
 perturbagen,treatment,cellline,similarity
-Hydroxychloroquine,CD83,HEPG2,0.4304
-Lopinavir,TLR7,HEPG2,0.3709
+Bupropion,CD83,HEPG2,0.6555
+Bupropion,TLR7,HEPG2,0.6533
+Carbetocin,CD83,HEPG2,-0.5826
+Benazepril,CD83,HEPG2,0.5702
+Enalapril,TLR7,HEPG2,0.5834
+Moexipril,CD83,HEPG2,0.5473
+Olmesartan,CD83,HEPG2,0.6489
+Quinapril,IL1B,HEPG2,0.349
+Quinapril,CD83,HEPG2,0.5699
+Quinapril,TLR7,HEPG2,0.521

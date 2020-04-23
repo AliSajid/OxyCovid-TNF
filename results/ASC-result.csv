@@ -1,0 +1,10 @@
+perturbagen,treatment,cellline,similarity
+Chloroquine,ARG1,ASC,0.6488
+Lopinavir,ARG1,ASC,0.6006
+Captopril,ARG1,ASC,0.5383
+Enalapril,ARG1,ASC,0.6356
+Fosinopril,ARG1,ASC,0.6322
+Moexipril,ARG1,ASC,0.5569
+Perindopril,ARG1,ASC,0.6241
+Ramipril,ARG1,ASC,0.5118
+Telmisartan,ARG1,ASC,0.6171

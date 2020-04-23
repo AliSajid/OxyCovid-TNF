@@ -1,5 +1,11 @@
 perturbagen,treatment,cellline,similarity
-Carbetocin,IL6R,PC3,0.4525
-Chloroquine,CD46,PC3,0.5807
-Bupropion,IL6R,PC3,0.5137
+Bupropion,IL6R,PC3,0.5525
 Bupropion,CD46,PC3,0.5254
+Carbetocin,IL6R,PC3,-0.5156
+Chloroquine,CD46,PC3,0.5807
+Benazepril,IL6R,PC3,0.5221
+Captopril,TLR9,PC3,0.298
+Captopril,CD46,PC3,0.6694
+Lisinopril,IL6R,PC3,0.5034
+Olmesartan,IL6R,PC3,0.6291
+Quinapril,IL6R,PC3,0.55
