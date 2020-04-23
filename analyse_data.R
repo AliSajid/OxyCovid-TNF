@@ -37,10 +37,15 @@ for (i in 1:length(files)) {
 df <- reduce(dfs, bind_rows)
 
 drugs <- c("Carbetocin", "Desmopressin", "Hydroxychloroquine", "Chloroquine",
-           "Bupropion", "Ritonavit", "Lopinavir")
+           "Bupropion", "Ritonavit", "Lopinavir", "Benazepril", "Captopril", "Enalapril",
+           "Fosinopril", "Lisinopril", "Moexipril", "Olmesartan", "Perindopril", "Quinapril",
+           "Ramipril", "Telmisartan", "Valsartan")
 
 complete <- inner_join(df, metadata, by = c("Source_Signature" = "SignatureId")) %>% 
-  mutate(perturbagen = str_to_title(Perturbagen)) %>% 
+  mutate(perturbagen = str_to_title(Perturbagen),
+         perturbagen = if_else(perturbagen == "Enalaprilat", "Enalapril", perturbagen),
+         perturbagen = if_else(perturbagen == "ENT-Benazepril", "Benazepril", perturbagen),
+         perturbagen = if_else(perturbagen == "Olmesartan Medoxomil", "Olmesartan", perturbagen)) %>% 
   filter(perturbagen %in% drugs)
 
 filter_data <- function(data) {
@@ -109,6 +114,9 @@ process_gene(all_results, "CD40") # Does not have Carbetocin in result
 process_gene(all_results, "CD46") # Does not have a direct comparison with Carbetocin
 process_gene(all_results, "CD83") # Selecting HA1E
 process_gene(all_results, "CD44") # Does not have a direct comparison with Carbetocin
+process_gene(all_results, "AGT")
+process_gene(all_results, "AGTR1")
+#process_gene(all_results, "ACE")
 
 carbetocin <- all_results %>% 
   filter(perturbagen == "Carbetocin") %>% 
