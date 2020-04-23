@@ -1,0 +1,7 @@
+SignatureId	Perturbagen	GeneTargets	Concentration	CellLine	Time	is_exemplar
+LINCSCP_11432	Moexipril	ACE	10uM	ASC	24h	1
+LINCSCP_17963	Moexipril	ACE	10uM	HCC515	24h	0
+LINCSCP_180042	Moexipril	ACE	10uM	A375	6h	1
+LINCSCP_220970	Moexipril	ACE	10uM	HEPG2	6h	1
+LINCSCP_284711	Moexipril	ACE	10uM	SKB	24h	1
+LINCSCP_33370	Moexipril	ACE	10uM	MCF7	24h	0
