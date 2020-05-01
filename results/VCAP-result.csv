@@ -21,6 +21,7 @@ Enalapril,CD83,VCAP,0.5793
 Fosinopril,CTLA4,VCAP,0.6632
 Fosinopril,CD44,VCAP,0.5987
 Lisinopril,CTLA4,VCAP,-0.6095
+Lisinopril,IL2RA,VCAP,0.4337
 Moexipril,CTLA4,VCAP,0.5986
 Moexipril,CD44,VCAP,0.5512
 Olmesartan,CD44,VCAP,-0.627

@@ -1,9 +1,11 @@
 perturbagen,treatment,cellline,similarity
 Bupropion,TLR9,HA1E,0.6319
 Bupropion,IL6,HA1E,-0.5782
+Bupropion,IL2,HA1E,0.5647
 Carbetocin,IL6,HA1E,0.7417
 Carbetocin,ARG1,HA1E,-0.6181
 Carbetocin,TLR9,HA1E,-0.5912
+Carbetocin,IL2,HA1E,-0.5644
 Chloroquine,IL1B,HA1E,0.5877
 Chloroquine,TLR9,HA1E,0.6381
 Chloroquine,IL6R,HA1E,0.5543
@@ -55,6 +57,7 @@ Quinapril,ARG1,HA1E,0.5953
 Quinapril,IL6,HA1E,-0.5652
 Quinapril,TLR9,HA1E,0.5223
 Quinapril,CD19,HA1E,-0.52
+Quinapril,IL2,HA1E,0.5613
 Ramipril,IL6,HA1E,0.5307
 Ramipril,IL6R,HA1E,0.4893
 Ramipril,TLR9,HA1E,0.5489
