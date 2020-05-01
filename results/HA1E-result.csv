@@ -68,3 +68,9 @@ Valsartan,IL6R,HA1E,0.5232
 Valsartan,CD83,HA1E,0.6382
 Valsartan,ARG1,HA1E,0.6265
 Valsartan,TLR9,HA1E,0.6187
+Hydroxychloroquine,AGT,HA1E,0.2618
+Hydroxychloroquine,TLR7,HA1E,0.4071
+Hydroxychloroquine,IL6,HA1E,-0.351
+Hydroxychloroquine,ARG1,HA1E,-0.558
+Hydroxychloroquine,IL6R,HA1E,0.5236
+Hydroxychloroquine,TLR9,HA1E,-0.5024

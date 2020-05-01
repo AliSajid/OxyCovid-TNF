@@ -13,3 +13,5 @@ Olmesartan,IL1B,MCF7,0.5145
 Ramipril,IL1B,MCF7,-0.3077
 Ramipril,CD46,MCF7,0.4987
 Telmisartan,TNF,MCF7,0.6435
+Hydroxychloroquine,IL1B,MCF7,0.4221
+Hydroxychloroquine,TNF,MCF7,0.6238

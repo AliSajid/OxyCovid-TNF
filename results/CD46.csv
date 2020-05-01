@@ -7,6 +7,7 @@ Telmisartan,A549,0.4372
 Valsartan,A549,0.4492
 Perindopril,A549,0.4581
 Fosinopril,A549,0.5862
+Hydroxychloroquine,HCC515,0.3056
 Benazepril,HT29,0.4658
 Quinapril,HT29,0.4814
 Lopinavir,HT29,0.4882

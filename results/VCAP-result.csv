@@ -37,3 +37,5 @@ Telmisartan,CD44,VCAP,0.6699
 Telmisartan,CD19,VCAP,0.5179
 Valsartan,CTLA4,VCAP,0.6682
 Valsartan,CD44,VCAP,0.5687
+Hydroxychloroquine,CTLA4,VCAP,0.6821
+Hydroxychloroquine,CD19,VCAP,-0.5097

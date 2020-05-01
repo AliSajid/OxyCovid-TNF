@@ -1,5 +1,6 @@
 perturbagen,cellline,similarity
 Captopril,A549,0.5433
+Hydroxychloroquine,HCC515,0.3297
 Desmopressin,HCC515,0.3565
 Perindopril,HCC515,0.456
 Fosinopril,HCC515,0.4784

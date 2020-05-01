@@ -2,6 +2,7 @@ perturbagen,cellline,similarity
 Lisinopril,HT29,0.5146
 Desmopressin,MCF7,-0.4296
 Bupropion,NPC,0.5938
+Hydroxychloroquine,NPC,0.6697
 Olmesartan,VCAP,-0.627
 Benazepril,VCAP,-0.5195
 Quinapril,VCAP,0.5147

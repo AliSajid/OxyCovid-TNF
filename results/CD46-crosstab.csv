@@ -1,6 +1,7 @@
-cellline,Benazepril,Bupropion,Captopril,Carbetocin,Chloroquine,Desmopressin,Enalapril,Fosinopril,Lisinopril,Lopinavir,Moexipril,Olmesartan,Perindopril,Quinapril,Ramipril,Telmisartan,Valsartan
-A375,NA,NA,NA,NA,NA,NA,0.554,NA,NA,NA,0.495,-0.5955,NA,NA,NA,NA,NA
-A549,NA,NA,NA,NA,NA,0.3436,NA,0.5862,NA,NA,NA,NA,0.4581,NA,NA,0.4372,0.4492
-HT29,0.4658,NA,NA,NA,NA,NA,NA,NA,NA,0.4882,NA,NA,NA,0.4814,NA,NA,NA
-MCF7,NA,NA,NA,0.5517,NA,NA,NA,NA,0.503,NA,NA,NA,NA,NA,0.4987,NA,NA
-PC3,NA,0.5254,0.6694,NA,0.5807,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+cellline,Benazepril,Bupropion,Captopril,Carbetocin,Chloroquine,Desmopressin,Enalapril,Fosinopril,Hydroxychloroquine,Lisinopril,Lopinavir,Moexipril,Olmesartan,Perindopril,Quinapril,Ramipril,Telmisartan,Valsartan
+A375,NA,NA,NA,NA,NA,NA,0.554,NA,NA,NA,NA,0.495,-0.5955,NA,NA,NA,NA,NA
+A549,NA,NA,NA,NA,NA,0.3436,NA,0.5862,NA,NA,NA,NA,NA,0.4581,NA,NA,0.4372,0.4492
+HCC515,NA,NA,NA,NA,NA,NA,NA,NA,0.3056,NA,NA,NA,NA,NA,NA,NA,NA,NA
+HT29,0.4658,NA,NA,NA,NA,NA,NA,NA,NA,NA,0.4882,NA,NA,NA,0.4814,NA,NA,NA
+MCF7,NA,NA,NA,0.5517,NA,NA,NA,NA,NA,0.503,NA,NA,NA,NA,NA,0.4987,NA,NA
+PC3,NA,0.5254,0.6694,NA,0.5807,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

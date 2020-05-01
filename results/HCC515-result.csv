@@ -31,3 +31,6 @@ Ramipril,AGTR1,HCC515,0.5522
 Ramipril,AGT,HCC515,-0.4135
 Telmisartan,AGTR1,HCC515,-0.4993
 Valsartan,AGTR1,HCC515,0.5861
+Hydroxychloroquine,AGTR1,HCC515,-0.4271
+Hydroxychloroquine,CD40,HCC515,0.3297
+Hydroxychloroquine,CD46,HCC515,0.3056

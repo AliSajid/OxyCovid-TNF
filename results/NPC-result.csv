@@ -1,3 +1,4 @@
 perturbagen,treatment,cellline,similarity
 Bupropion,CD44,NPC,0.5938
 Desmopressin,ARG1,NPC,0.3958
+Hydroxychloroquine,CD44,NPC,0.6697

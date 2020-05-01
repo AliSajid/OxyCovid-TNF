@@ -13,6 +13,7 @@ Lisinopril,HA1E,-0.5671
 Perindopril,HA1E,0.6888
 Desmopressin,HEKTE,0.3752
 Bupropion,MCF7,0.6194
+Hydroxychloroquine,MCF7,0.6238
 Telmisartan,MCF7,0.6435
 Chloroquine,MCF7,0.7443
 Benazepril,VCAP,0.5046
