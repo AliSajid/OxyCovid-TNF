@@ -116,6 +116,7 @@ process_gene(all_results, "CD83") # Selecting HA1E
 process_gene(all_results, "CD44") # Does not have a direct comparison with Carbetocin
 process_gene(all_results, "AGT")
 process_gene(all_results, "AGTR1")
+process_gene(all_results, "CTLA4")
 #process_gene(all_results, "ACE")
 
 carbetocin <- all_results %>% 

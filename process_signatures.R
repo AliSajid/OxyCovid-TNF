@@ -34,7 +34,7 @@ for (drug in drugs_signatures) {
 
 drug_results <- list.files("data/filtered/", pattern = "LINCSCP", full.names = TRUE)
 
-genes <- c("IL1A", "IL1B", "IL6", "IL6R",  "TNF",
+genes <- c("IL1A", "IL1B", "IL2", "IL2RA", "IL2RB", "IL2RG", "IL6", "IL6R",  "TNF",
           "CD8A", "CD8B", "CD4", "CTLA4", "CD19",
           "CD20", "CD3G", "CD11B", "TLR9", "TLR7", "ARG1",
           "CD40", "CD46", "CD44", "CD81", "CD83", "AGT", "AGTR1", "ACE", "ACE2")
