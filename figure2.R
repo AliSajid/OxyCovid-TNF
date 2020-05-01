@@ -3,16 +3,23 @@ library(RColorBrewer)
 library(gplots)
 library(reshape2)
 
+# order <- rev(c("Carbetocin", "Desmopressin", "Hydroxychloroquine", "Chloroquine",
+#                "Bupropion", "Ritonavir", "Lopinavir", "Benazepril", "Captopril", "Enalapril",
+#                "Fosinopril", "Lisinopril", "Moexipril","Perindopril", "Quinapril",
+#                "Ramipril", "Telmisartan", "Valsartan", "Olmesartan"))
+
 order <- rev(c("Carbetocin", "Desmopressin", "Hydroxychloroquine", "Chloroquine",
-               "Bupropion", "Ritonavir", "Lopinavir", "Benazepril", "Captopril", "Enalapril",
-               "Fosinopril", "Lisinopril", "Moexipril","Perindopril", "Quinapril",
-               "Ramipril", "Telmisartan", "Valsartan", "Olmesartan"))
+               "Bupropion", "Ritonavir", "Lopinavir"))
 
 all_averaged <- read_csv("results/all_averaged.csv")
 
 all_averaged_cross <- all_averaged %>% 
   dcast(perturbagen ~ treatment, value.var = "mean_similarity") %>% 
   filter(perturbagen != "Desmopressin") %>%  
+  select_if(names(.) %in% c("IL1A", "IL1B", "IL1R1", "IL1R2", "IL1RN",
+                            "IL1RAP", "IL1RL1", "IL1RL2", "IL6", "IL6R", "IL6ST", "TNF",
+                            "ARG1", "TLR9", "CD40", "CD46", "CTLA4",
+                            "perturbagen")) %>% 
   column_to_rownames("perturbagen") %>% 
   as.matrix()
 
@@ -60,6 +67,6 @@ png(filename = "figures/average-concordance-heatmap-all.png", width = 1920, heig
 heatmap.2(all_averaged_cross, dendrogram = "none", col = colors, colsep = 1:15, rowsep = 1:15,
           trace = "none", cexRow = 3, cexCol = 3, Rowv = FALSE, Colv = FALSE,
           density.info = "none", keysize = 1, margins = c(15, 25), notecex=1.5,
-          main = "Average Concordance of the Perturbagens with all genes",
+#          main = "Average Concordance of the Perturbagens with all genes",
           key.title = NA, key.xlab = NA, key.par = list(cex = 1.3))
 dev.off()
