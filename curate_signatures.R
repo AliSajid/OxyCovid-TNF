@@ -38,9 +38,14 @@ telmisartan <- read_tsv("signature_data/Telmisartan-Signatures.tsv")
 
 valsartan <- read_tsv("signature_data/Valsartan-Signatures.tsv")
 
+losartan <- read_tsv("signature_data/Losartan-Signatures.tsv")
+
+candesartan <- read_tsv("signature_data/Candesartan-Signatures.tsv")
+
 drugs_list <- list(bupropion, carbetocin, chloroquine, desmopressin, lopinavir, ritonavir,
                    benazepril, captopril, enalapril, fosinopril, lisinopril, moexipril,
-                   olmesartan, perindopril, quinapril, ramipril, telmisartan, valsartan, hydroxychloroquine)
+                   olmesartan, perindopril, quinapril, ramipril, telmisartan, valsartan,
+                   hydroxychloroquine, losartan, candesartan)
 selected_lines <- list()
 
 for (i in 1:length(drugs_list)) {
@@ -51,7 +56,8 @@ cell_lines <- reduce(selected_lines, union)
 
 drugs <- bind_rows(bupropion, carbetocin, chloroquine, desmopressin, lopinavir, ritonavir,
                    benazepril, captopril, enalapril, fosinopril, lisinopril, moexipril,
-                   olmesartan, perindopril, quinapril, ramipril, telmisartan, valsartan, hydroxychloroquine) %>% 
+                   olmesartan, perindopril, quinapril, ramipril, telmisartan, valsartan,
+                   hydroxychloroquine, losartan, candesartan) %>% 
   filter(CellLine %in% cell_lines)
 
 write_file(paste(drugs$SignatureId, collapse = "\n"), "drugs_signature_ids")
