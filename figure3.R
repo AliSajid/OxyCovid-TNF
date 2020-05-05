@@ -9,17 +9,39 @@ library(reshape2)
 #                         "Ramipril", "Telmisartan", "Valsartan", "Olmesartan"))
 
 order <-
-  rev(
-    c(
-      "Carbetocin",
-      "Hydroxychloroquine",
-      "Desmopressin",
-      "Chloroquine",
-      "Bupropion",
-      "Ritonavir",
-      "Lopinavir"
-    )
-  )
+  rev(c(
+    "Carbetocin",
+    "Hydroxychloroquine",
+    "Desmopressin",
+    #      "Chloroquine",
+    "Lopinavir",
+    "Bupropion"
+  ))
+
+inf_genes <- c(
+  "IL1A",
+  "IL1B",
+  "IL1R1",
+  "IL1R2",
+  "IL1RN",
+  "IL1RAP",
+  "IL1RL1",
+  "IL1RL2",
+  "IL6",
+  "IL6ST",
+  "TNF",
+  "IL2",
+  "IL2RA",
+  "IL2RB",
+  "IL2RG"
+)
+
+imm_genes <- c("ARG1",
+               "TLR9",
+               "CD40",
+               "CD46")
+
+all_genes <- c(inf_genes, imm_genes)
 
 all_results <- read_csv("results/all_results.csv")
 
@@ -29,22 +51,7 @@ all_results_cross <- all_results %>%
   # filter(perturbagen != "Desmopressin") %>%
   select_if(
     names(.) %in% c(
-      "IL1A",
-      "IL1B",
-      "IL1R1",
-      "IL1R2",
-      "IL1RN",
-      "IL1RAP",
-      "IL1RL1",
-      "IL1RL2",
-      "IL6",
-      "IL6ST",
-      "TNF",
-      "ARG1",
-      "TLR9",
-      "CD40",
-      "CD46",
-      "CTLA4",
+all_genes,
       "perturbagen"
     )
   ) %>%
@@ -75,18 +82,7 @@ all_results_cross_inf <- all_results %>%
   #                           "IL1RAP", "IL1RL1", "IL1RL2", "IL6", "IL6R", "IL6ST", "TNF",
   #                           "AGT", "AGTR1", "perturbagen")) %>%
   select_if(
-    names(.) %in% c(
-      "IL1A",
-      "IL1B",
-      "IL1R1",
-      "IL1R2",
-      "IL1RN",
-      "IL1RAP",
-      "IL1RL1",
-      "IL1RL2",
-      "IL6",
-      "IL6ST",
-      "TNF",
+    names(.) %in% c(inf_genes,
       "perturbagen"
     )
   ) %>%
@@ -99,10 +95,12 @@ all_results_cross_imm <- all_results %>%
   dcast(perturbagen ~ treatment, value.var = "similarity") %>%
   #  filter(perturbagen != "Desmopressin") %>%
   # select_if(names(.) %in% c("ARG1", "TLR9", "CD40", "CD46", "CTLA4", "AGT", "AGTR1", "perturbagen")) %>%
-  select_if(names(.) %in% c("ARG1", "TLR9", "CD40", "CD46", "CTLA4", "perturbagen")) %>%
+  select_if(names(.) %in% c(imm_genes,
+                            # "CTLA4",
+                            "perturbagen")) %>%
   column_to_rownames("perturbagen") %>%
   as.matrix()
-all_results_cross_imm <- all_results_cross_imm[order, ]
+all_results_cross_imm <- all_results_cross_imm[order,]
 
 colors <- colorRampPalette(c("red", "black", "green"))(n = 11)
 
@@ -113,7 +111,7 @@ heatmap.2(
   all_results_cross_inf,
   dendrogram = "none",
   col = colors,
-  colsep = 1:2,
+  colsep = 1:5,
   rowsep = 1:5,
   trace = "none",
   cexRow = 3,
@@ -167,7 +165,7 @@ heatmap.2(
   all_results_cross,
   dendrogram = "none",
   col = colors,
-  colsep = 1:8,
+  colsep = 1:9,
   rowsep = 1:5,
   trace = "none",
   cexRow = 3,
