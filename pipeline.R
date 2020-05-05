@@ -5,9 +5,9 @@ library(tidyverse)
 get_l1000_signature <- function(signature_id) {
   url <- "http://www.ilincs.org/api/ilincsR/downloadSignature"
   query = list(sigID = signature_id, noOfTopGenes = 978)
-  
+
+  print(paste(signature_id, "Downloading Signature", sep = ": "))
   request <- POST(url, query = query)
-  
   if (status_code(request) == 200) {
     signature <- fromJSON(
       toJSON(
@@ -38,6 +38,7 @@ get_concordant_signatures <- function(signature_file, signature_df, library = "L
   query = list(lib = library)
   body = list(file = upload_file(signature_file))
   
+  print("Downloading Concordant Signatures")
   request <- POST(url, query = query, body = body)
   
   if (status_code(request) == 200) {
