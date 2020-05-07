@@ -16,14 +16,25 @@ quinapril <- read_tsv("signature_data/Quinapril-Signatures.tsv")
 ramipril <- read_tsv("signature_data/Ramipril-Signatures.tsv")
 telmisartan <- read_tsv("signature_data/Telmisartan-Signatures.tsv")
 valsartan <- read_tsv("signature_data/Valsartan-Signatures.tsv")
+losartan <- read_tsv("signature_data/Losartan-Signatures.tsv")
+candesartan <- read_tsv("signature_data/Candesartan-Signatures.tsv")
 
-drugs_signatures <- c(carbetocin$SignatureId, benazepril$SignatureId, captopril$SignatureId, enalapril$SignatureId,
-                    fosinopril$SignatureId, lisinopril$SignatureId, moexipril$SignatureId, olmesartan$SignatureId, perindopril$SignatureId,
-                    quinapril$SignatureId, ramipril$SignatureId, telmisartan$SignatureId, valsartan$SignatureId)
+# drugs_signatures <- c(carbetocin$SignatureId, benazepril$SignatureId, captopril$SignatureId,
+#                     enalapril$SignatureId, fosinopril$SignatureId,
+#                     lisinopril$SignatureId, moexipril$SignatureId,
+#                     olmesartan$SignatureId, perindopril$SignatureId,
+#                     quinapril$SignatureId, ramipril$SignatureId,
+#                     telmisartan$SignatureId, valsartan$SignatureId,
+#                     losartan$SignatureId, candesartan$SsignatureId)
 
-drugs_list <- list(carbetocin,
-                   benazepril, captopril, enalapril, fosinopril, lisinopril, moexipril,
-                   olmesartan, perindopril, quinapril, ramipril, telmisartan, valsartan)
+drugs_signatures <- c(carbetocin$SignatureId,
+                      losartan$SignatureId, candesartan$SignatureId)
+
+# drugs_list <- list(carbetocin,
+#                    benazepril, captopril, enalapril, fosinopril, lisinopril, moexipril,
+#                    olmesartan, perindopril, quinapril, ramipril, telmisartan, valsartan)
+
+drugs_list <- list(carbetocin, losartan, candesartan)
 
 metadata <- bind_rows(drugs_list) %>% 
   select(SignatureId, Perturbagen) %>% 
@@ -71,9 +82,11 @@ similarity_df <- tibble(drug_A_id = drugA,
                         drug_B = drugB_Name,
                         similarity = similarity)
 
-drugs <- c("Carbetocin", "Benazepril", "Captopril", "Enalapril",
-           "Fosinopril", "Lisinopril", "Moexipril", "Olmesartan", "Perindopril", "Quinapril",
-           "Ramipril", "Telmisartan", "Valsartan")
+# drugs <- c("Carbetocin", "Benazepril", "Captopril", "Enalapril",
+#            "Fosinopril", "Lisinopril", "Moexipril", "Olmesartan", "Perindopril", "Quinapril",
+#            "Ramipril", "Telmisartan", "Valsartan")
+
+drugs <- c("Carbetocin", "Losartan", "Candesartan")
 
 filtered <- similarity_df %>% 
   select(drug_A, drug_B, similarity) %>% 
@@ -91,7 +104,7 @@ order <- rev(c("Carbetocin", "Benazepril", "Captopril", "Enalapril",
            "Fosinopril", "Lisinopril", "Moexipril", "Olmesartan", "Perindopril", "Quinapril",
            "Ramipril", "Telmisartan", "Valsartan"))
 
-cross <- cross[order,order]
+cross <- round(cross[rev(drugs),rev(drugs)], 3)
 
 colors <- colorRampPalette(c("red", "black", "green"))(n=11)
 
@@ -100,5 +113,5 @@ heatmap.2(cross, dendrogram = "none", col = colors, colsep = 1:12, rowsep = 1:12
           notecol = "white", trace = "none", cexRow = 3, cexCol = 3,
           density.info = "none", keysize = 1, margins = c(15, 25), notecex=3.0, Rowv = FALSE, Colv = FALSE,
           main = "Concordance of the Perturbagens with Immune genes",
-          key.title = NA, key.xlab = NA, key.par = list(cex = 1.3))
+          key.title = NA, key.xlab = NA, key.par = list(cex = 1.3), cellnote = cross)
 dev.off()
