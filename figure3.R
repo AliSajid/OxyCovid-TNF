@@ -18,6 +18,13 @@ order <-
     "Bupropion"
   ))
 
+all_all_genes <-  c("IL1A", "IL1B", "IL2", "IL2RA", "IL2RB", "IL2RG", "IL6", "IL6R",  "TNF",
+                        "CD8A", "CD8B", "CD4", "CTLA4", "CD19",
+                        "CD20", "CD3G", "CD11B", "TLR9", "TLR7", "ARG1",
+                        "CD40", "CD46", "CD44", "CD81", "CD83", "AGT", "AGTR1", "ACE", "ACE2",
+                        "DPP4", "ANPEP", "CEACAM1", "LAP3", "MMEL1", "CXCL1", "CXCL2", "CXCL3",
+                        "CXCL5", "CXCL8", "CCL20", "HEY1", "MUC21", "CCL2", "TGFB1", "TGFBR1", "TGFBR2", "TGFBR3")
+
 inf_genes <- c(
   "IL1A",
   "IL1B",
@@ -47,6 +54,7 @@ all_results <- read_csv("results/all_results.csv")
 
 all_results_cross <- all_results %>%
   select(-cellline) %>%
+  filter(perturbagen %in% order) %>% 
   dcast(perturbagen ~ treatment, value.var = "similarity") %>%
   # filter(perturbagen != "Desmopressin") %>%
   select_if(
@@ -76,11 +84,8 @@ all_results_cross %>% as.data.frame() %>% rownames_to_column("Perturbagen") %>% 
 
 all_results_cross_inf <- all_results %>%
   select(-cellline) %>%
+  filter(perturbagen %in% order) %>% 
   dcast(perturbagen ~ treatment, value.var = "similarity") %>%
-  #  filter(perturbagen != "Desmopressin") %>%
-  # select_if(names(.) %in% c("IL1A", "IL1B", "IL1R1", "IL1R2", "IL1RN",
-  #                           "IL1RAP", "IL1RL1", "IL1RL2", "IL6", "IL6R", "IL6ST", "TNF",
-  #                           "AGT", "AGTR1", "perturbagen")) %>%
   select_if(
     names(.) %in% c(inf_genes,
       "perturbagen"
@@ -92,17 +97,15 @@ all_results_cross_inf <- all_results_cross_inf[order, ]
 
 all_results_cross_imm <- all_results %>%
   select(-cellline) %>%
+  filter(perturbagen %in% order) %>% 
   dcast(perturbagen ~ treatment, value.var = "similarity") %>%
-  #  filter(perturbagen != "Desmopressin") %>%
-  # select_if(names(.) %in% c("ARG1", "TLR9", "CD40", "CD46", "CTLA4", "AGT", "AGTR1", "perturbagen")) %>%
   select_if(names(.) %in% c(imm_genes,
-                            # "CTLA4",
                             "perturbagen")) %>%
   column_to_rownames("perturbagen") %>%
   as.matrix()
 all_results_cross_imm <- all_results_cross_imm[order,]
 
-colors <- colorRampPalette(c("red", "black", "green"))(n = 11)
+colors <- colorRampPalette(c("red", "black", "green"))(n = 100)
 
 png(filename = "figures/max-concordance-heatmap-inflammation.png",
     width = 1920,
@@ -184,85 +187,3 @@ heatmap.2(
   notecol = "white"
 )
 dev.off()
-
-# 
-# pdf(file = "figures/max-concordance-heatmap-inflammation.pdf",
-#     width = 1920,
-#     height = 1384)
-# heatmap.2(
-#   all_results_cross_inf,
-#   dendrogram = "none",
-#   col = colors,
-#   colsep = 1:5,
-#   rowsep = 1:15,
-#   cellnote = all_results_cross_inf,
-#   notecol = "white",
-#   trace = "none",
-#   cexRow = 3,
-#   cexCol = 3,
-#   density.info = "none",
-#   keysize = 1,
-#   margins = c(15, 25),
-#   notecex = 3.0,
-#   Rowv = FALSE,
-#   Colv = FALSE,
-#   main = "Concordance of the Perturbagens with Inflammation-driving genes",
-#   key.title = NA,
-#   key.xlab = NA,
-#   key.par = list(cex = 1.3)
-# )
-# dev.off()
-# 
-# pdf(file = "figures/max-concordance-heatmap-immune.pdf",
-#     width = 1920,
-#     height = 1384)
-# heatmap.2(
-#   all_results_cross_imm,
-#   dendrogram = "none",
-#   col = colors,
-#   colsep = 1:6,
-#   rowsep = 1:15,
-#   cellnote = all_results_cross_imm,
-#   notecol = "white",
-#   trace = "none",
-#   cexRow = 3,
-#   cexCol = 3,
-#   density.info = "none",
-#   keysize = 1,
-#   margins = c(15, 25),
-#   notecex = 3.0,
-#   Rowv = FALSE,
-#   Colv = FALSE,
-#   main = "Concordance of the Perturbagens with Immune genes",
-#   key.title = NA,
-#   key.xlab = NA,
-#   key.par = list(cex = 1.3)
-# )
-# dev.off()
-# 
-# pdf(file = "figures/max-concordance-heatmap-all.pdf",
-#     width = 8,
-#     height = 6)
-# heatmap.2(
-#   all_results_cross_imm,
-#   dendrogram = "none",
-#   col = colors,
-#   colsep = 1:15,
-#   rowsep = 1:15,
-#   cellnote = all_results_cross_imm,
-#   notecol = "white",
-#   trace = "none",
-#   cexRow = 3,
-#   cexCol = 3,
-#   density.info = "none",
-#   keysize = 1,
-#   margins = c(15, 25),
-#   notecex = 3.0,
-#   Rowv = FALSE,
-#   Colv = FALSE,
-#   main = "Concordance of the Perturbagens with Immune genes",
-#   key.title = NA,
-#   key.xlab = NA,
-#   key.par = list(cex = 1.3)
-# )
-# dev.off()

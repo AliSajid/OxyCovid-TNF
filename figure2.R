@@ -23,7 +23,7 @@ all_averaged_cross <- all_averaged %>%
   column_to_rownames("perturbagen") %>% 
   as.matrix()
 
-order <- order[order %in% rownames(all_results_cross)]
+order <- order[order %in% rownames(all_averaged_cross)]
 all_averaged_cross <- all_averaged_cross[order,]
 
 all_averaged_cross_inf <- all_averaged %>% 
