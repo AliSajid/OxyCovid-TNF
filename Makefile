@@ -27,5 +27,6 @@ visualise: figure*.R
 	Rscript figure1.R
 	Rscript figure2.R
 	Rscript figure3.R
+	Rscript figure4.R	
 
 all: curate process analyse visualise
