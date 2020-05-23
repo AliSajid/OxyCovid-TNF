@@ -46,7 +46,13 @@ inf_genes <- c(
 imm_genes <- c("ARG1",
                "TLR9",
                "CD40",
-               "CD46")
+               "CD46",
+               "CEACAM1",
+               "CD83",
+               "CCL20",
+               "TGFB1",
+               "TGFBR1",
+               "TGFBR2")
 
 all_genes <- c(inf_genes, imm_genes)
 
