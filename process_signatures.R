@@ -39,7 +39,7 @@ genes <- c("IL1A", "IL1B", "IL2", "IL2RA", "IL2RB", "IL2RG", "IL6", "IL6R",  "TN
           "CD20", "CD3G", "CD11B", "TLR9", "TLR7", "ARG1",
           "CD40", "CD46", "CD44", "CD81", "CD83", "AGT", "AGTR1", "ACE", "ACE2",
           "DPP4", "ANPEP", "CEACAM1", "LAP3", "MMEL1", "CXCL1", "CXCL2", "CXCL3",
-          "CXCL5", "CXCL8", "CCL20", "HEY1", "MUC21", "CCL2", "TGFB1", "TGFBR1", "TGFBR2", "TGFBR3")
+          "CXCL5", "CXCL8", "CCL20", "HEY1", "MUC21", "CCL2", "TGFB1", "TGFBR1", "TGFBR2", "TGFBR3", "NFKB1")
 
 for (drug in drug_results) {
   name <- str_split(drug, "/")[[1]][4]

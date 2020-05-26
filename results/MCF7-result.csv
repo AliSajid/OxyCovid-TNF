@@ -16,8 +16,10 @@ Desmopressin,CD83,MCF7,0.4198
 Desmopressin,TLR9,MCF7,0.4169
 Desmopressin,CXCL8,MCF7,-0.3421
 Desmopressin,IL1B,MCF7,0.3366
+Lopinavir,NFKB1,MCF7,0.481
 Benazepril,HEY1,MCF7,0.4016
 Benazepril,IL2RB,MCF7,0.597
+Captopril,NFKB1,MCF7,0.3425
 Captopril,IL2RA,MCF7,0.317
 Captopril,MMEL1,MCF7,0.5562
 Lisinopril,TGFBR2,MCF7,0.6395
@@ -25,6 +27,7 @@ Lisinopril,CD46,MCF7,0.503
 Lisinopril,IL2RB,MCF7,0.6384
 Moexipril,IL2RA,MCF7,0.4224
 Olmesartan,IL1B,MCF7,0.5145
+Perindopril,NFKB1,MCF7,0.4558
 Ramipril,IL2RA,MCF7,0.4979
 Ramipril,IL1B,MCF7,-0.3077
 Ramipril,CD46,MCF7,0.4987

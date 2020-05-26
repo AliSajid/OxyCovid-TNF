@@ -28,6 +28,7 @@ Bupropion,CCL2,VCAP,0.5719
 Bupropion,MMEL1,HA1E,0.5556
 Bupropion,CXCL8,HEPG2,0.5458
 Bupropion,CD19,HT29,0.5277
+Bupropion,NFKB1,VCAP,-0.5066
 Bupropion,CD81,HT29,0.499
 Bupropion,CD46,PC3,0.5254
 Bupropion,LAP3,NPC,0.5045
@@ -45,6 +46,7 @@ Carbetocin,TLR7,A549,-0.6014
 Carbetocin,AGT,HCC515,-0.5869
 Carbetocin,CD40,HEKTE,-0.5322
 Carbetocin,IL2RB,MCF7,0.6401
+Carbetocin,NFKB1,VCAP,0.6352
 Carbetocin,TGFBR1,VCAP,0.6333
 Carbetocin,ANPEP,VCAP,0.6297
 Carbetocin,CD19,VCAP,0.591
@@ -77,6 +79,7 @@ Chloroquine,HEY1,HCC515,0.5611
 Chloroquine,CCL20,HT29,0.6252
 Chloroquine,MMEL1,VCAP,0.5906
 Chloroquine,CD46,PC3,0.5807
+Chloroquine,NFKB1,VCAP,0.7148
 Chloroquine,CXCL1,A375,0.6789
 Chloroquine,TGFBR1,VCAP,0.6603
 Chloroquine,IL2RB,MCF7,0.6597
@@ -119,6 +122,7 @@ Desmopressin,IL2RB,MCF7,0.4692
 Desmopressin,TLR7,VCAP,0.4236
 Desmopressin,CD83,MCF7,0.4198
 Desmopressin,TLR9,MCF7,0.4169
+Desmopressin,NFKB1,VCAP,0.4042
 Desmopressin,IL6,VCAP,0.3946
 Desmopressin,ANPEP,HEPG2,0.3651
 Desmopressin,AGTR1,HCC515,-0.362
@@ -143,6 +147,7 @@ Lopinavir,TGFBR2,A375,0.588
 Lopinavir,CD19,HA1E,0.5852
 Lopinavir,IL6R,HA1E,0.5377
 Lopinavir,MMEL1,HA1E,0.51
+Lopinavir,NFKB1,MCF7,0.481
 Lopinavir,CCL2,PC3,0.6557
 Lopinavir,ARG1,ASC,0.6006
 Lopinavir,IL2RA,PC3,-0.5426
@@ -172,6 +177,7 @@ Benazepril,CCL2,VCAP,0.4552
 Benazepril,TGFB1,HEPG2,0.4451
 Benazepril,MMEL1,HA1E,0.4087
 Benazepril,IL1B,A375,-0.3747
+Benazepril,NFKB1,VCAP,-0.5286
 Benazepril,CD46,HT29,0.4658
 Benazepril,HEY1,MCF7,0.4016
 Benazepril,LAP3,HCC515,0.3453
@@ -205,6 +211,7 @@ Captopril,TGFB1,HEPG2,0.5423
 Captopril,CCL2,PC3,0.5396
 Captopril,HEY1,A375,0.4352
 Captopril,TGFBR1,MCF7.311,0.3697
+Captopril,NFKB1,MCF7,0.3425
 Captopril,IL2RA,MCF7,0.317
 Captopril,ANPEP,HEPG2,-0.3165
 Captopril,TLR9,PC3,0.298
@@ -230,6 +237,7 @@ Captopril,AGT,A375,0.2853
 Captopril,TLR7,A549,0.2783
 Captopril,CD19,HA1E,-0.2743
 Captopril,CCL20,A375,0.252
+Enalapril,NFKB1,A549,0.4537
 Enalapril,HEY1,HA1E,0.4673
 Enalapril,CD40,HCC515,0.6185
 Enalapril,TLR7,HEPG2,0.5834
@@ -267,6 +275,7 @@ Fosinopril,AGT,A375,-0.4516
 Fosinopril,TGFB1,HA1E,-0.4146
 Fosinopril,IL6R,HA1E,0.4779
 Fosinopril,HEY1,A549,0.4394
+Fosinopril,NFKB1,SW480,0.391
 Fosinopril,TLR7,A549,0.5027
 Fosinopril,TLR9,HA1E,0.5017
 Fosinopril,IL2RA,PC3,0.4821
@@ -321,6 +330,7 @@ Lisinopril,AGTR1,HCC515,-0.5399
 Lisinopril,CXCL2,HEPG2,0.5071
 Lisinopril,IL1B,A375,0.4682
 Lisinopril,HEY1,HT29,0.4679
+Lisinopril,NFKB1,VCAP,0.4945
 Lisinopril,CD19,HA1E,-0.448
 Lisinopril,IL2RA,VCAP,0.4337
 Lisinopril,TLR9,HA1E,0.6054
@@ -357,6 +367,7 @@ Moexipril,ANPEP,HEPG2,0.5232
 Moexipril,CXCL8,HEPG2,-0.5089
 Moexipril,CCL20,HA1E,0.501
 Moexipril,TGFB1,SW480,0.4997
+Moexipril,NFKB1,VCAP,0.4869
 Moexipril,AGT,A375,0.4868
 Moexipril,DPP4,HT29,0.4175
 Moexipril,CXCL2,A549,0.284
@@ -392,6 +403,7 @@ Olmesartan,TGFBR2,VCAP,0.7789
 Olmesartan,TGFBR1,VCAP,0.6981
 Olmesartan,ANPEP,VCAP,0.6633
 Olmesartan,CTLA4,VCAP,-0.6509
+Olmesartan,NFKB1,VCAP,0.6398
 Olmesartan,TLR9,HA1E,0.639
 Perindopril,ANPEP,HEPG2,0.5333
 Perindopril,HEY1,HT29,0.3857
@@ -406,6 +418,7 @@ Perindopril,TGFBR1,HA1E.101,0.4756
 Perindopril,IL1B,HA1E,0.4785
 Perindopril,DPP4,HEPG2,0.4512
 Perindopril,CEACAM1,HT29,0.6545
+Perindopril,NFKB1,MCF7,0.4558
 Perindopril,TGFBR2,A375,0.749
 Perindopril,CTLA4,VCAP,0.7345
 Perindopril,CD44,VCAP,0.6901
@@ -446,6 +459,7 @@ Quinapril,TGFB1,A375,0.5074
 Quinapril,ANPEP,HA1E,0.4902
 Quinapril,CCL2,PC3,0.5278
 Quinapril,AGTR1,HCC515,0.4596
+Quinapril,NFKB1,PC3,0.588
 Quinapril,CEACAM1,A375,0.5285
 Quinapril,CD44,VCAP,0.5147
 Quinapril,HEY1,A375,0.4654
@@ -490,6 +504,7 @@ Ramipril,CCL20,HT29,0.3208
 Ramipril,IL1B,MCF7,-0.3077
 Ramipril,TLR7,A549,0.5601
 Ramipril,TLR9,HA1E,0.5489
+Ramipril,NFKB1,VCAP,0.5349
 Ramipril,CXCL1,A375,0.5213
 Ramipril,TGFBR1,VCAP,0.505
 Ramipril,CD46,MCF7,0.4987
@@ -525,6 +540,7 @@ Telmisartan,TGFB1,HA1E,0.5226
 Telmisartan,CCL20,HA1E,0.497
 Telmisartan,TGFBR2,VCAP,0.6993
 Telmisartan,ANPEP,VCAP,0.65
+Telmisartan,NFKB1,VCAP,0.6292
 Telmisartan,TGFBR1,VCAP,0.6077
 Telmisartan,CD19,VCAP,0.5179
 Telmisartan,AGTR1,HCC515,-0.4993
@@ -538,6 +554,7 @@ Valsartan,TNF,A375,-0.6117
 Valsartan,CCL2,PC3,-0.6085
 Valsartan,IL2,A375,0.6031
 Valsartan,ANPEP,HT29,0.591
+Valsartan,NFKB1,VCAP,0.5569
 Valsartan,CD40,HEKTE,0.547
 Valsartan,DPP4,HT29,0.4582
 Valsartan,IL1B,HA1E,0.4261
@@ -588,6 +605,7 @@ Hydroxychloroquine,CCL2,PC3,0.5632
 Hydroxychloroquine,ARG1,HA1E,-0.558
 Hydroxychloroquine,IL2,HEPG2,0.5494
 Hydroxychloroquine,CD81,A549,0.5464
+Hydroxychloroquine,NFKB1,VCAP,-0.5427
 Hydroxychloroquine,LAP3,NPC,0.5314
 Hydroxychloroquine,IL6R,HA1E,0.5236
 Hydroxychloroquine,CD19,VCAP,-0.5097

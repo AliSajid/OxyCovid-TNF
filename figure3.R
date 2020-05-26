@@ -36,11 +36,13 @@ inf_genes <- c(
   "IL1RL2",
   "IL6",
   "IL6ST",
+  "IL6R",
   "TNF",
   "IL2",
   "IL2RA",
   "IL2RB",
-  "IL2RG"
+  "IL2RG",
+  "NFKB1"
 )
 
 imm_genes <- c("ARG1",
@@ -147,7 +149,7 @@ heatmap.2(
   all_results_cross_imm,
   dendrogram = "none",
   col = colors,
-  colsep = 1:4,
+  colsep = 1:5,
   rowsep = 1:5,
   trace = "none",
   cexRow = 3,

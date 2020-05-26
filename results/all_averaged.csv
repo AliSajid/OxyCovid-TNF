@@ -26,6 +26,7 @@ Benazepril,IL6,0.5861
 Benazepril,IL6R,0.5221
 Benazepril,LAP3,0.3453
 Benazepril,MMEL1,0.4087
+Benazepril,NFKB1,-0.5286
 Benazepril,TGFB1,0.4451
 Benazepril,TGFBR1,0.5742
 Benazepril,TGFBR2,0.7592
@@ -59,6 +60,7 @@ Bupropion,IL6,-0.5782
 Bupropion,IL6R,0.5525
 Bupropion,LAP3,0.5045
 Bupropion,MMEL1,0.5556
+Bupropion,NFKB1,-0.5066
 Bupropion,TGFB1,0.5543
 Bupropion,TGFBR1,0.5068
 Bupropion,TGFBR2,0.6332
@@ -92,6 +94,7 @@ Captopril,IL6,0.669
 Captopril,IL6R,0.5329
 Captopril,LAP3,0.5539
 Captopril,MMEL1,0.5562
+Captopril,NFKB1,0.3425
 Captopril,TGFB1,0.5423
 Captopril,TGFBR1,0.3697
 Captopril,TGFBR2,0.7026
@@ -125,6 +128,7 @@ Carbetocin,IL6,0.7417
 Carbetocin,IL6R,-0.5156
 Carbetocin,LAP3,0.4177
 Carbetocin,MMEL1,0.4872
+Carbetocin,NFKB1,0.6352
 Carbetocin,TGFB1,-0.5532
 Carbetocin,TGFBR1,0.6333
 Carbetocin,TGFBR2,-0.7065
@@ -158,6 +162,7 @@ Chloroquine,IL6,0.634
 Chloroquine,IL6R,0.5543
 Chloroquine,LAP3,0.6284
 Chloroquine,MMEL1,0.5906
+Chloroquine,NFKB1,0.7148
 Chloroquine,TGFB1,0.593
 Chloroquine,TGFBR1,0.6603
 Chloroquine,TGFBR2,0.6871
@@ -191,6 +196,7 @@ Desmopressin,IL6,0.3946
 Desmopressin,IL6R,-0.334
 Desmopressin,LAP3,0.2498
 Desmopressin,MMEL1,0.3615
+Desmopressin,NFKB1,0.4042
 Desmopressin,TGFB1,0.3834
 Desmopressin,TGFBR1,0.4118
 Desmopressin,TGFBR2,0.4872
@@ -224,6 +230,7 @@ Enalapril,IL6,0.6952
 Enalapril,IL6R,0.5889
 Enalapril,LAP3,0.6565
 Enalapril,MMEL1,0.5704
+Enalapril,NFKB1,0.4537
 Enalapril,TGFB1,0.5467
 Enalapril,TGFBR1,0.5409
 Enalapril,TGFBR2,0.6791
@@ -257,6 +264,7 @@ Fosinopril,IL6,0.6454
 Fosinopril,IL6R,0.4779
 Fosinopril,LAP3,0.6139
 Fosinopril,MMEL1,0.5654
+Fosinopril,NFKB1,0.391
 Fosinopril,TGFB1,-0.4146
 Fosinopril,TGFBR1,0.4543
 Fosinopril,TGFBR2,0.7256
@@ -289,6 +297,7 @@ Hydroxychloroquine,IL6,-0.351
 Hydroxychloroquine,IL6R,0.5236
 Hydroxychloroquine,LAP3,0.5314
 Hydroxychloroquine,MMEL1,0.3073
+Hydroxychloroquine,NFKB1,-0.5427
 Hydroxychloroquine,TGFB1,0.3533
 Hydroxychloroquine,TGFBR1,-0.4898
 Hydroxychloroquine,TGFBR2,0.6384
@@ -322,6 +331,7 @@ Lisinopril,IL6,-0.5781
 Lisinopril,IL6R,0.5034
 Lisinopril,LAP3,-0.5185
 Lisinopril,MMEL1,0.4176
+Lisinopril,NFKB1,0.4945
 Lisinopril,TGFB1,0.5787
 Lisinopril,TGFBR1,0.5298
 Lisinopril,TGFBR2,0.6395
@@ -355,6 +365,7 @@ Lopinavir,IL6,0.6681
 Lopinavir,IL6R,0.5377
 Lopinavir,LAP3,0.5966
 Lopinavir,MMEL1,0.51
+Lopinavir,NFKB1,0.481
 Lopinavir,TGFB1,-0.5261
 Lopinavir,TGFBR1,0.4843
 Lopinavir,TGFBR2,0.588
@@ -386,6 +397,7 @@ Moexipril,IL6,0.6033
 Moexipril,IL6R,0.4607
 Moexipril,LAP3,0.5427
 Moexipril,MMEL1,0.4393
+Moexipril,NFKB1,0.4869
 Moexipril,TGFB1,0.4997
 Moexipril,TGFBR1,0.4433
 Moexipril,TGFBR2,0.6453
@@ -419,6 +431,7 @@ Olmesartan,IL6,-0.7271
 Olmesartan,IL6R,0.6291
 Olmesartan,LAP3,0.5087
 Olmesartan,MMEL1,0.4633
+Olmesartan,NFKB1,0.6398
 Olmesartan,TGFB1,0.5815
 Olmesartan,TGFBR1,0.6981
 Olmesartan,TGFBR2,0.7789
@@ -452,6 +465,7 @@ Perindopril,IL6,0.6697
 Perindopril,IL6R,0.6224
 Perindopril,LAP3,0.5696
 Perindopril,MMEL1,0.5261
+Perindopril,NFKB1,0.4558
 Perindopril,TGFB1,0.5251
 Perindopril,TGFBR1,0.4756
 Perindopril,TGFBR2,0.749
@@ -485,6 +499,7 @@ Quinapril,IL6,-0.5652
 Quinapril,IL6R,0.55
 Quinapril,LAP3,0.5462
 Quinapril,MMEL1,0.4357
+Quinapril,NFKB1,0.588
 Quinapril,TGFB1,0.5074
 Quinapril,TGFBR1,0.5104
 Quinapril,TGFBR2,0.6436
@@ -519,6 +534,7 @@ Ramipril,IL6,0.5307
 Ramipril,IL6R,0.4893
 Ramipril,LAP3,0.5558
 Ramipril,MMEL1,0.4791
+Ramipril,NFKB1,0.5349
 Ramipril,TGFB1,0.356
 Ramipril,TGFBR1,0.505
 Ramipril,TGFBR2,0.6371
@@ -552,6 +568,7 @@ Telmisartan,IL6,0.6184
 Telmisartan,IL6R,0.5448
 Telmisartan,LAP3,0.6373
 Telmisartan,MMEL1,0.5711
+Telmisartan,NFKB1,0.6292
 Telmisartan,TGFB1,0.5226
 Telmisartan,TGFBR1,0.6077
 Telmisartan,TGFBR2,0.6993
@@ -586,6 +603,7 @@ Valsartan,IL6,0.6727
 Valsartan,IL6R,0.5232
 Valsartan,LAP3,0.5678
 Valsartan,MMEL1,0.5875
+Valsartan,NFKB1,0.5569
 Valsartan,TGFB1,0.582
 Valsartan,TGFBR1,0.5515
 Valsartan,TGFBR2,0.6864

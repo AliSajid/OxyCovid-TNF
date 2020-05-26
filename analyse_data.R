@@ -118,6 +118,7 @@ process_gene(all_results, "AGT")
 process_gene(all_results, "AGTR1")
 process_gene(all_results, "CTLA4")
 process_gene(all_results, "IL6R")
+process_gene(all_results, "NFKB1")
 #process_gene(all_results, "ACE")
 
 carbetocin <- all_results %>% 

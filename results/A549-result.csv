@@ -15,6 +15,7 @@ Benazepril,CD19,A549,0.5088
 Captopril,CD40,A549,0.5433
 Captopril,CD83,A549,0.2885
 Captopril,TLR7,A549,0.2783
+Enalapril,NFKB1,A549,0.4537
 Enalapril,CEACAM1,A549,0.6395
 Fosinopril,HEY1,A549,0.4394
 Fosinopril,TLR7,A549,0.5027
