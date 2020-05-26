@@ -117,6 +117,7 @@ process_gene(all_results, "CD44") # Does not have a direct comparison with Carbe
 process_gene(all_results, "AGT")
 process_gene(all_results, "AGTR1")
 process_gene(all_results, "CTLA4")
+process_gene(all_results, "IL6R")
 #process_gene(all_results, "ACE")
 
 carbetocin <- all_results %>% 
