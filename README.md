@@ -1,4 +1,5 @@
 # COVID-19/TNF Project
+[![DOI](https://zenodo.org/badge/254979618.svg)](https://zenodo.org/badge/latestdoi/254979618)
 
 ## Introduction
 
